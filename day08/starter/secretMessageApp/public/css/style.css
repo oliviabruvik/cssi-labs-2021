@@ -1,5 +1,6 @@
 * {
   font-family: 'Nunito Sans', sans-serif;
+  background: #E4E9F2;
 }
 
 :root {
@@ -12,7 +13,7 @@ body {
   background: var(--background);
 }
 
-.hero-body {
+hero-body {
   justify-content: center;
 }
 
@@ -24,8 +25,23 @@ body {
 
 input {
   background: var(--shadowDark) !important;
+
 }
 
 a {
   font-weight: 600;
+}
+
+.hidden {
+    display : none;
+}
+
+.card {
+    background-color: #E4E9F2;
+    font-size: 19px;
+    border-radius: 25px;
+    padding: 1.5rem;
+    /* box-shadow: 8px 8px 15px var(--shadowDark), -8px -8px 15px var(--shadowLight); */
+    top: 50%;
+    text-align: center;
 }

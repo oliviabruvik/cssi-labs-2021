@@ -17,31 +17,129 @@
   </head>
 
   <body>
+    <!-- <section class="hero is-fullheight"> -->
     <section class="hero is-fullheight">
         <div class="content">
             <h2 class="has-text-centered mt-6">View Your Messages!</h2>
+            <!-- <h3 class="has-text-centered" id="attemptsLeft">Attempts left: 3</h3> -->
         </div>
-        <div id="passcodeInput" class="hero-body has-text-centered">
-            <div class="login">
-            <form action="javascript:void(0);">
-                <div class="field">
-                    <div class="control">
-                        <input class="input is-medium is-rounded" type="text" placeholder="What's the passcode?" id="passcode" required />
+        
+        <div class="columns is-centered hero-body">
+             <!-- First column -->
+            <div class="column is-narrow">
+                <div id="passcodeInput" class="hero-body has-text-centered">
+                    <div class="login">
+                        <form action="javascript:void(0);">
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input is-medium is-rounded" type="text" placeholder="What's the passcode?" id="passcode1" required />
+                                </div>
+                            </div>
+                            <button class="button is-block is-fullwidth is-primary is-medium is-rounded" type="submit" id="viewMsg" onclick="getMessages(1)">
+                                Click Here
+                            </button>
+                        </form>
+                    <br>
                     </div>
                 </div>
-                <button class="button is-block is-fullwidth is-primary is-medium is-rounded" type="submit" id="viewMsg" onclick="getMessages()">
-                    Click Here
-                </button>
-            </form>
-            <br>
+                <section class="container">
+                    <div class="card hidden" id="message-card-1">
+                        <header class="card-header">
+                            <p class="card-header-title is-centered">
+                            Message
+                            </p>
+                            <!-- <button class="card-header-icon" aria-label="more options">
+                                <span class="icon">
+                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </button> -->
+                        </header>
+                        <div class="card-content">
+                            <div class="content" id="message1">
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="#" class="card-footer-item" id="new-message" onclick="newMessage(2)">View additional message</a>
+                        </footer>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Second column -->
+            <div class="column hidden is-narrow" id="column2">
+                <div id="passcodeInput" class="hero-body has-text-centered">
+                    <div class="login">
+                    <form action="javascript:void(0);">
+                        <div class="field">
+                            <div class="control">
+                                <input class="input is-medium is-rounded" type="text" placeholder="What's the passcode?" id="passcode2" required />
+                            </div>
+                        </div>
+                        <button class="button is-block is-fullwidth is-primary is-medium is-rounded" type="submit" id="viewMsg" onclick="getMessages(2)">
+                            Click Here
+                        </button>
+                    </form>
+                    <br>
+                    </div>
+                </div>
+                <section class="container">
+                    <div class="card hidden" id="message-card-2">
+                        <header class="card-header">
+                            <p class="card-header-title is-centered">
+                            Second message
+                            </p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content" id="message2">
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="#" class="card-footer-item" id="new-message" onclick="newMessage(3)">View additional message</a>
+                        </footer>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Third column -->
+            <div class="column hidden is-narrow" id="column3">
+                <div id="passcodeInput" class="hero-body has-text-centered">
+                    <div class="login">
+                    <form action="javascript:void(0);">
+                        <div class="field">
+                            <div class="control">
+                                <input class="input is-medium is-rounded" type="text" placeholder="What's the passcode?" id="passcode3" required />
+                            </div>
+                        </div>
+                        <button class="button is-block is-fullwidth is-primary is-medium is-rounded" type="submit" id="viewMsg" onclick="getMessages(3)">
+                            Click Here
+                        </button>
+                    </form>
+                    <br>
+                    </div>
+                </div>
+                <section class="container">
+                    <div class="card hidden" id="message-card-3">
+                        <header class="card-header">
+                            <p class="card-header-title is-centered">
+                            Third message
+                            </p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content" id="message3">
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="#" class="card-footer-item" id="new-message" onClick="window.location.reload();">Refresh to view more</a>
+                        </footer>
+                    </div>
+                </section>
             </div>
         </div>
-        <section class="container">
-            <h2 id="message" class="subtitle is-4"></h2>
-        </section>
 
     </section>
-  <script src="js/viewMessages.js"></script>
-  </body>
+    <script src="js/viewMessages.js"></script>
+    <script src="js/writeMessage.js"></script>
+
+</body>
 
 </html>
