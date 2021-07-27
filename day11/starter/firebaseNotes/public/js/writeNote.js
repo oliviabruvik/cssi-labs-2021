@@ -39,8 +39,9 @@ const submitNote = () => {
         document.querySelector("#noteText").value = "";
         document.querySelector("#noteTitle").value = "";
         document.querySelector("#noteLabel").value = "";
-
-     })
-        .catch(error => {
-        console.log(`Something bad happened ...\n${error}`)    
-})};
+        alert("Note successfully submitted!");
+    })
+    .catch(error => {
+        console.log(`Something bad happened ...\n${error}`)
+    })
+};

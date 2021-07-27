@@ -18,6 +18,10 @@
           padding: 5px;
           border: 1px solid #ccc;
       }
+
+      .hidden {
+          display: none;
+      }
     </style>
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/8.3.1/firebase-app.js"></script>
@@ -49,10 +53,30 @@
                         <br>
                         <p class="has-text-centered">
                             <a class="button is-medium is-info is-outlined" 
-                                onclick="signIn('username')">
-                                Sign In with Username and Password
+                                onclick="showSignInBox('Sign In')">
+                                Sign In/Up with Username and Password
                             </a>
                         </p>
+                        <br>
+                        <div class="box hidden" id="signInBox">
+                            <div class="field">
+                                <label class="label">Username</label>
+                                <div class="control">
+                                <input class="input" type="text" placeholder="e.g. johnsmith" id="usernameInput">
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label class="label">Password</label>
+                                <div class="control">
+                                <input class="input" type="text" placeholder="********" id="passwordInput">
+                                </div>
+                            </div>
+
+                            <button class="button is-primary" id="signInButton" onclick="signIn('username')">Sign In</button>
+                            <button class="button is-primary" id="signInButton" onclick="signUp()">Sign Up</button>
+                        </div>
+                        <br>
                     </div>
                 </div>
             </div>
