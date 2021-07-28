@@ -46,27 +46,30 @@ const writeNotesToHtml = (data) => {
 };
 
 
-const filterOnLabel = () => {
-    document.querySelector(`card-${label}`)
+const filterOnLabel = (note) => {
+    noteRenderArea.innerHTML = "";
+    // writeNotesToHtml(note);
+    // let label-card = document.querySelector(`card-${note.label}`);
+    
+    // noteRenderArea.innerHTML += card;
 };
+
 // .remove() + condition
 // Remove all elements that don't have matching labels
 
 const addLabelDropdown = (note) => {
     console.log("SUCCESS");
-    return `<a onclick="filterOnLabel()" class="dropdown-item">
+    return `<a onclick="filterOnLabel(${note})" class="dropdown-item">
                 ${note.label}
             </a>`;
 };
-
-
 
 const createHtmlForNote = (note) => {
     console.log(note);
     const randomColor = Math.floor(Math.random()*16777215).toString(16);
     //TODO: create html and put in the note data
     return `<div class="column is-one-third">
-                <div class="card" style="background-color: #${randomColor}" id="card-${note.label}">
+                <div class="card" style="background-color: #${randomColor}">
                     <header class="card-header">
                         <p class="card-header-title" style="color: white">
                             ${note.title}
